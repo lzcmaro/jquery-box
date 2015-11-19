@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>jQuery Box</title>		
+		<link type="text/css" href="jquery.box.css" rel="stylesheet" />
+		<script src="jquery-1.4.2.min.js" type="text/javascript"></script>
+		<script src="jquery.box.js" type="text/javascript"></script>
+		<style>
+			#box{display:none; width:150px; height:50px;}
+			.box-test .box-content{border:none; background:none;}
+		</style>
+		<script type="text/javascript">
+		jQuery(function($){
+			$("#box").box({
+				title: "Box", //title: false
+				modal: true,
+				btnClose: "btnClose",
+				//dragable: $("#box"),
+				//boxClass: "box-test",
+				create: function(){
+					//alert("create")
+				}
+			}).open()
+		});
+		
+		</script>
+	</head>
+	<body>
+		<div id="box" style="">
+			盒子。。。
+			<input id="btnClose" type="button" value="close" />
+		</div>
+	</body>		
+</html>
